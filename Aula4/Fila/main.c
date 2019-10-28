@@ -21,18 +21,20 @@ void inserir_fila(int n);
 int retirar_fila();
 void imprimir();
 
+ 
 void inserir_fila(int n){
     Nodo *novo;
-
     novo=(Nodo*)malloc(sizeof(Nodo));
     if(novo==NULL)exit(1);
     novo->info=n;
-    novo->prox=NULL;
+    novo->prox = NULL;
     if(inicio==NULL){
-      inicio=novo;
-    }else{
-        fim=novo;
-    }
+       inicio=novo;
+       fim=novo;
+    }else{               
+           fim->prox = novo;
+           fim=novo;    
+         }
 }
 
 
@@ -51,26 +53,22 @@ void imprimir(){
 int retirar_fila(){
     Nodo *aux;
     int n;
-    /*if(inicio==NULL){
-        printf("Pilha vazia");
+    if(inicio==NULL){
+        printf("\nFila vazia\n");
         return 0;
-    }*/
+    }
 
     aux=inicio;
     n=aux->info;
     inicio = inicio->prox;
     free(aux);
 
-    if(inicio==NULL){
-        printf("\nvazia");
-        return 0;
-    }
     return n;
 }
 
 
 int main()
-{   
+{    
       int op;
       int valor_pilha;
       do{
@@ -100,11 +98,11 @@ int main()
 
          }
    }while(op != 0); 
-    /*
+     /*
     inserir_fila(5);
-    //Inserir_fila(8);
+    inserir_fila(8);
     imprimir();
-    retirar();
+    retirar_fila();
     imprimir();*/
     return 0;
 }
