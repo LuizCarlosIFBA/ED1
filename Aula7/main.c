@@ -10,9 +10,7 @@ Nodo *topo = NULL;
 Nodo *fim, *inicio = NULL;
 Nodo *penultimo;
 
-void inserir_fila(int n);
-int retirar_fila();
-void listar_fila();
+
 void inserir_lista(int n);
 
 
@@ -78,27 +76,40 @@ int retirarInicio(){
     return n;
 }
 
-int retirarFim(){
-    Nodo *aux;
-    int n;
+void retirarFim(){
+    Nodo *ultimo;
+    Nodo *penultimo;
+    
     if(fim==NULL){
         printf("Nao existe valor no fim");
-        return 0;
-    }
+        return ;
+    }else if(inicio==fim)retirarInicio();
+          else{
+               ultimo=inicio->prox;
+               penultimo=inicio;
+               while(ultimo->prox!=NULL){
+                  penultimo=ultimo;
+                  ultimo=ultimo->prox;
+               }
+  
+               penultimo->prox=NULL;
+               }
+
     
+/*
     aux=fim;
     n=aux->info;
     free(aux);
-    fim=penultimo;
-    return n;
+    fim=penultimo;*/ 
+    
 }
 
+
 void listar(){
-int n;
    Nodo *aux;
    aux=inicio;
    if(aux==NULL){
-       printf("Fila vazia\n");
+       printf("Lista vazia\n");
    }else{
          printf("SAIDA:\n");
          while(aux != NULL){
@@ -120,7 +131,7 @@ void main(){
       printf("1 -> Inserir\n");
       printf("2 -> Remover no inicio\n");
       printf("3 -> Remover no fim\n");
-      printf("4 -> Imprimir\n");  
+      printf("4 -> Imprimir\n"); 
       printf("Opcao: "); scanf("%d", &op);
 
       switch(op){
