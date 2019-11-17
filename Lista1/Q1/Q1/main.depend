@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1573507797 source:c:\users\sacra\onedrive\Área de trabalho\q\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1573516755 source:c:\users\sacra\onedrive\Área de trabalho\estrutura2019\lista1\q1\q1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
