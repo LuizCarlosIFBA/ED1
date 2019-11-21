@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1574379776 source:c:\users\sacra\onedrive\Área de trabalho\estrutura2019\aula10\main\main.c
+	<stdio.h>
+	<stdlib.h>
+
