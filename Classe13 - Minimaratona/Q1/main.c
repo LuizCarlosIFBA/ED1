@@ -134,14 +134,14 @@ int main()
             exit(0);
             break;
          case 1:
-           printf("Inserir numero: "); scanf("%d", &valor_pilha);
+           printf("Digite um numero: "); scanf("%d", &valor_pilha);
            inserir_fila(valor_pilha);
             break;
          case 2:
             imprimir();
             break;
          default:
-            if(op < 0 || op>2) printf("Escreva um número\n\n");
+            if(op < 0 || op>2) printf("Escreva um numero de 0 ate 2\n\n");
 
          }
    }while(op != 0);
