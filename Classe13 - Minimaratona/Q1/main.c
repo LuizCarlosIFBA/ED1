@@ -25,7 +25,7 @@ int testaVazia(){
 
 Nodo *pusher(int n){
   Nodo *new = (Nodo*) malloc(sizeof(Nodo));
-   if(!new) printf("\nSem memória\n\n");
+   if(!new) printf("\nSem memÃ³ria\n\n");
    else{
      new->info=n;
    }
@@ -126,8 +126,7 @@ int main()
       printf("Escolha uma das opcoes abaixo\n");
       printf("0 -> sair\n");
       printf("1 -> Inserir\n");
-      printf("2 -> Remover\n");
-      printf("3 -> Imprimir\n");
+      printf("2 -> Imprimir\n");
       printf("Opcao: "); scanf("%d", &op);
 
       switch(op){
@@ -142,7 +141,7 @@ int main()
             imprimir();
             break;
          default:
-            if(op < 0 || op>2) printf("Escreva um número\n\n");
+            if(op < 0 || op>2) printf("Escreva um nÃºmero\n\n");
 
          }
    }while(op != 0);
