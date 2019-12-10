@@ -134,7 +134,7 @@ int main()
             exit(0);
             break;
          case 1:
-           printf("Inseri a um numero: "); scanf("%d", &valor_pilha);
+           printf("Inserir numero: "); scanf("%d", &valor_pilha);
            inserir_fila(valor_pilha);
             break;
          case 2:
