@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
 
 #include <stdio.h>
@@ -11,8 +11,7 @@ typedef struct nodo{
 }Nodo;
 
 Nodo *fim, *inicio=NULL;
-Nodo *topo = NULL;
-
+Nodo *topo = NULL;
 void inserir_fila(int n);
 int retirar_fila();
 void imprimir();
