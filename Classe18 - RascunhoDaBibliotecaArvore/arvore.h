@@ -36,3 +36,4 @@ Arvore* contar( Arvore* raiz){
 
         return(contar(raiz->esq)+ contar(raiz->dir)+1);
     }
+}
