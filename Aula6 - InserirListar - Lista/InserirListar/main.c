@@ -100,7 +100,7 @@ void main(){
 
     case 3:
         listar();
-        system("pause \n");
+        //system("pause \n");
 
         return main();
     break;

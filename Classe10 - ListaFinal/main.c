@@ -107,10 +107,10 @@ int main()
 				scanf("%d",&num);
 				inserir(&inicio,num);
 				break;
-            case 2:
+            		case 2:
 				listar_dupla(inicio);
 				break;
-            case 3:
+            		case 3:
 				exit(0);
 				break;
 			case 4:
